@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卡片翻轉效果</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="timer">剩餘時間: 10</div>
+
+    <!-- 倒數計時下拉選單 -->
+    <label for="timer-select">選擇倒數時間:</label>
+    <select id="timer-select">
+        <option value="5">5 秒</option>
+        <option value="10" selected>10 秒</option>
+        <option value="15">15 秒</option>
+    </select>
+
+    <!-- 網格大小下拉選單 -->
+    <label for="grid-size-select">選擇網格大小:</label>
+    <select id="grid-size-select">
+        <option value="2x2">2x2</option>
+        <option value="4x4" selected>4x4</option>
+        <option value="6x6">6x6</option>
+    </select>
+
+    <button id="start-game-btn">開始</button>
+
+    <div class="button-container">
+        <button id="flip-front-btn">翻轉背面</button>
+        <button id="flip-back-btn">翻轉正面</button>
+        <button id="next-theme-btn">下一個主題</button>
+    </div>
+
+    <div class="grid-container" id="card-grid"></div>
+
+    <!-- 配對成功與失敗音效 -->
+    <audio id="success-sound" src="sounds/magic3.mp3"></audio>
+    <audio id="fail-sound" src="sounds/magic2.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
